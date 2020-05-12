@@ -1,10 +1,4 @@
-import {
-  Entity,
-  Column,
-  CreateDateColumn,
-  UpdateDateColumn,
-  PrimaryGeneratedColumn,
-} from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('transactions')
 class Transaction {
@@ -22,10 +16,10 @@ class Transaction {
 
   // category_id: string;
 
-  @CreateDateColumn('time with time zone')
+  @Column('time with time zone')
   created_at: Date;
 
-  @UpdateDateColumn('time with time zone')
+  @Column('time with time zone')
   updated_at: Date;
 }
 
