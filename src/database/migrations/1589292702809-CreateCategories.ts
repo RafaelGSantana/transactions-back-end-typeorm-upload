@@ -9,10 +9,9 @@ export default class CreateCategories1589292702809
         columns: [
           {
             name: 'id',
-            type: 'varchar',
+            type: 'uuid',
             isPrimary: true,
             generationStrategy: 'uuid',
-            default: 'uuid_generate_v4()',
           },
           {
             name: 'title',
@@ -21,10 +20,12 @@ export default class CreateCategories1589292702809
           {
             name: 'created_at',
             type: 'timestamp with time zone',
+            default: 'now()',
           },
           {
             name: 'updated_at',
             type: 'timestamp with time zone',
+            default: 'now()',
           },
         ],
       }),
